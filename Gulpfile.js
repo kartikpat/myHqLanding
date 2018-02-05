@@ -56,7 +56,10 @@ gulp.task('build-js', function(){
         .pipe(concat(staticMapper[key]["scripts"]["prod"][0]))
         .on('error', notify.onError("Error: <%= error.message %>"))
         .pipe(uglify())
-        .on('error', notify.onError("Error: <%= error.message %>"))
+        .on('error', function(err){
+        	console.log(err);
+        })
+        //.on('error', notify.onError("Error: <%= error.message %>"))
         .pipe(gulp.dest('.'))
         .pipe(notify('Uglified JavaScript (' +staticMapper[key]["scripts"]["prod"][0]+ moment().format('MMM Do h:mm:ss A') + ')'))
 	}
@@ -83,7 +86,9 @@ gulp.task('watch-test', function(){
 })
 
 gulp.task('watch', ['clean','build-sass', 'build-css', 'build-js'], function(){
-	gulp.watch('static/scss/**/*.scss', ['build-sass']);
+	gulp.watch('static/scss/**/*.scss');
 });
+
+gulp.task('build', ['clean', 'build-sass', 'build-css', 'build-js']);
 
 gulp.task('default', ['watch']);

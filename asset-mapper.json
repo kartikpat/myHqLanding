@@ -5,7 +5,7 @@
             	"static/css/index.css"
 			],
 			"prod": [
-				"static/build/css/index.min.css"
+				"build/css/index.min.css"
 			]
 		},
 		"scripts": {
@@ -13,7 +13,7 @@
 				"static/js/index.js"
 			],
 			"prod" : [
-				"static/build/js/index.min.js"
+				"build/js/index.min.js"
 			]
 		}
 	}

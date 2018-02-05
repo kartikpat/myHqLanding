@@ -86,7 +86,7 @@ gulp.task('watch-test', function(){
 })
 
 gulp.task('watch', ['clean','build-sass', 'build-css', 'build-js'], function(){
-	gulp.watch('static/scss/**/*.scss');
+	gulp.watch('static/scss/**/*.scss', ['build-sass']);
 });
 
 gulp.task('build', ['clean', 'build-sass', 'build-css', 'build-js']);

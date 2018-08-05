@@ -1,0 +1,29 @@
+@import "colors";
+@import "type";
+
+.clr-bl {
+    color: $colorBlue;
+}
+
+.primary-text {
+    font-size: $primaryTextSize;
+}
+
+.secondary-text {
+    font-size: $secondaryTextSize;
+    line-height: 1.6;
+}
+
+.text {
+    font-size: $textSize;
+    line-height: 1.4;
+    color: $textColor;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.txt-uppercase {
+    text-transform: uppercase;
+}

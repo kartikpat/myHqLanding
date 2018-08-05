@@ -1,20 +1,194 @@
-body, html{
-	margin: 0;
-	padding: 20px;
-	background-color: black;
+@import 'global/globals';
+
+.container {
+	font-family: $primaryFont;
+	padding:60px;
+	max-width: 1024px;
+	.header {
+		margin-bottom: 20px;
+	}
+	.content {
+	}
+	.section-first {
+		padding: 15px;
+		.subscription-block {
+			padding: 15px;
+			padding-bottom: 20px;
+			background-color: rgb(28, 55, 68);
+			color: #fff;
+			line-height: 1.4;
+			border-radius: 3px;
+			.text {
+				color: #fff;
+				font-size: 16px;
+			}
+		}
+		.subscription-benifits {
+			margin: 40px 0;
+
+		}
+		.benifit {
+			padding: 0 15px 25px 15px;
+			i:before {
+				color: $colorLightGrey;
+			}
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+		.btn-pricing {
+			background-color: $colorBlue;
+			color: #fff;
+			width: 100%;
+			border: none;
+			padding: 10px;
+		}
+	}
+	.section-second {
+		padding: 15px;
+		.carousel {
+			height: 100%;
+		}
+		.carousel-inner {
+			height: 100%;
+		}
+		.carousel-item {
+			height: 100%;
+			img {
+				height: 100%;
+			}
+		}
+		.carousel-indicators {
+			top: 20px;
+			bottom: unset;
+			margin-right: 0;
+			margin-left: 0;
+		}
+		.carousel-tabs {
+			color: #fff;
+			width: 50%;
+			text-align: center;
+			cursor: pointer;
+			font-size: $tabTextSize;
+			position: relative;
+			&:after {
+				display: none;
+				content: '';
+			    width: 20px;
+			    height: 4px;
+			    background: $colorBlue;
+			    position: absolute;
+				bottom: -10px;
+			    left: 50%;
+			    right: 50%;
+			    transform: translate(-50%,-50%);
+				border-radius: 25px;
+			}
+			&.active {
+				color: $colorBlue;
+				background-color: unset;
+				&:after {
+					display: block;
+				}
+			}
+		}
+		.slide-btns {
+			position: absolute;
+		    bottom: 20px;
+		    right: 30px;
+			width: 50px;
+			.carousel-control-next, .carousel-control-prev {
+				position: static;
+				display: inline;
+			}
+		}
+		.carousel-caption {
+			left: 20px;
+			right: unset;
+			padding: 0;
+			.text {
+				color: #fff;
+				text-align: left;
+				padding: 5px;
+				font-weight: bold;
+				&:before {
+					display: inline-block;
+				    font-variant: normal;
+				    text-rendering: auto;
+				    -webkit-font-smoothing: antialiased;
+					font-family: "Font Awesome 5 Free";
+					font-weight: bold;
+					content: '\f005';
+					color: $colorBlue;
+					margin-right: 7px;
+				}
+			}
+		}
+	}
+	.footer {
+		padding: 20px 15px;
+		text-align: center;
+		background-color: $colorLightGrey;
+		-webkit-box-shadow: 0px 0px 4px 0px rgba(112,112,112,1);
+		-moz-box-shadow: 0px 0px 2px 0px rgba(112,112,112,1);
+		box-shadow: 0px 1px 5px 0px rgba(112,112,112,1);
+		margin: 30px 0;
+		a {
+			&:hover {
+				text-decoration: none;
+				color: $colorBlue;
+			}
+		}
+	}
 }
 
-.main-content{
-	height: 400px;
-	width: 400px;
+@media screen and (max-width: 768px) {
+	.primary-text {
+		font-size: 30px;
+	}
+	.secondary-text {
+		font-size: 24px;
+	}
+	.container {
+		.section-first {
+			padding: 0 15px;
+			.subscription-block {
+				.text {
+					font-size: 14px;
+				}
+			}
+		}
+		.section-second {
+			padding: 0;
+		}
+	}
+
 }
 
-.center-block{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	background: white;
+@media screen and (max-width: 480px) {
+	.container {
+		.section-first {
+			margin-bottom: 40px;
+		}
+		.section-second {
+			height: 400px;
+			.carousel-caption {
+				max-width: 60%;
+			}
+		}
+	}
+	.benifit {
+		.text {
+			padding: 10px 0 0 0;
+			text-align: center;
+		}
+		.icon {
+			text-align: center;
+		}
+	}
+	.footer {
+		.text {
+			line-height: 1.6;
+		}
+	}
 }

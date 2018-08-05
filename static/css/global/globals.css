@@ -1,0 +1,20 @@
+.clr-bl {
+  color: #00d0da; }
+
+.primary-text {
+  font-size: 34px; }
+
+.secondary-text {
+  font-size: 26px;
+  line-height: 1.6; }
+
+.text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #464646; }
+
+.bold {
+  font-weight: bold; }
+
+.txt-uppercase {
+  text-transform: uppercase; }

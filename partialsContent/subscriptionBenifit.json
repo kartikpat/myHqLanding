@@ -1,0 +1,20 @@
+{
+    "subscriptionBenifits": [
+        {
+            "icon": "fas fa-calendar-alt fa-2x",
+            "text": "Work across All Locations"
+        },
+        {
+            "icon": "fas fa-calendar-alt fa-2x",
+            "text": "Get back Subscription Fee as Redeemable Credits"
+        },
+        {
+            "icon": "fas fa-calendar-alt fa-2x",
+            "text": "Visit based plans with No Expiry"
+        },
+        {
+            "icon": "fas fa-calendar-alt fa-2x",
+            "text": "Flexibility to choose from Different Plans"
+        }
+    ]
+}
